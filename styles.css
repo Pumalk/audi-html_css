@@ -1,0 +1,286 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    text-align: center;
+    background-image: url('./медиа/фон.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 3;
+    opacity: 1;
+    animation: hideVideo 1s ease-out forwards;
+    animation-delay: 3s;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes hideVideo {
+    0% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 17px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#scrollToTop:hover {
+background-color: white;
+color: black;
+}
+
+header {
+    background-color: #000;
+    padding: 15px 0;
+}
+
+header img {
+    width: 200px;
+}
+
+header a{
+    color: rgb(148, 143, 143);
+    text-decoration: none;
+}
+
+
+nav div{
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(43, 228, 203);
+}
+
+main img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.opisanie {
+    font-size: 20px;
+    text-align: justify;
+    width: fit-content;
+    margin: 30px;
+    border-radius: 10px;
+    text-shadow: 0.1em 0.1em #212121;
+    border: 3px solid rgb(190, 40, 40);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    -webkit-box-shadow:0px 0px 75px 20px rgba(255,0,0,0.4);
+    -moz-box-shadow: 0px 0px 75px 20px rgba(255,0,0,0.4);
+    box-shadow: 0px 0px 75px 20px rgba(255,0,0,0.4);
+}
+
+.car {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px; 
+    justify-content: center;
+}
+
+.kuzov {
+    font-size: 30px;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.site-link {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 250px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.site-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.site-link h2 {
+    font-size: 30px;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.site-link a {
+    color: rgb(0, 255, 213);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid rgb(200, 100, 100);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.site-link a:hover {
+    background-color: dimgray;
+    color: #fff;
+}
+
+
+.forma {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: whitesmoke;
+    padding: 50px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 30px auto;
+    text-align: left;
+    -webkit-box-shadow:0px 0px 300px 1px rgba(255,0,0,1);
+    -moz-box-shadow: 0px 0px 300px 1px rgba(255,0,0,1);
+    box-shadow: 0px 0px 300px 1px rgba(255,0,0,1);
+}
+
+.forma h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.forma label {
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.forma input,
+.forma select,
+.forma textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.forma textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.forma button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(200, 100, 100);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.forma button:hover {
+    background-color: dimgray;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+
+#notifyButton:focus + .popup {
+    display: block;
+}
+
+.close {
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: dimgray;
+    text-decoration: none;
+}
+
+
+body, header, nav, .opisanie, .car, .forma, footer {
+    position: relative;
+    z-index: 1;
+}
